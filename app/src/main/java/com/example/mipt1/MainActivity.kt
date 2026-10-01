@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
             textView.setTextColor(Color.RED)
         }
         buttonBackground.setOnClickListener {
-            textView.setBackgroundColor(Color.YELLOW)
+            textView.setBackgroundColor(Color.YELLOW) //code for REVERT
         }
     }
 }
