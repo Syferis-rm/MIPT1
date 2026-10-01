@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
         val textView = findViewById<TextView>(R.id.textViewResult)
         val button = findViewById<Button>(R.id.buttonShow)
         val buttonColor = findViewById<Button>(R.id.buttonColor)
+        val buttonBackground = findViewById<Button>(R.id.buttonBackground)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -27,6 +28,9 @@ class MainActivity : AppCompatActivity() {
         }
         buttonColor.setOnClickListener {
             textView.setTextColor(Color.RED)
+        }
+        buttonBackground.setOnClickListener {
+            textView.setBackgroundColor(Color.YELLOW)
         }
     }
 }
