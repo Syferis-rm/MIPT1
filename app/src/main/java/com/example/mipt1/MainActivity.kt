@@ -1,5 +1,6 @@
 package com.example.mipt1
 
+import android.graphics.Color
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
@@ -15,6 +16,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val textView = findViewById<TextView>(R.id.textViewResult)
         val button = findViewById<Button>(R.id.buttonShow)
+        val buttonColor = findViewById<Button>(R.id.buttonColor)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -22,6 +24,9 @@ class MainActivity : AppCompatActivity() {
         }
         button.setOnClickListener {
             textView.text = "Pasirinktas užrašas"
+        }
+        buttonColor.setOnClickListener {
+            textView.setTextColor(Color.RED)
         }
     }
 }
